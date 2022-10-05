@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastPay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="dist/style.min.css">
+</head>
+<body>
+
+
+    <!-- Header and Navigation -->
+
+    <section id="banner" class="container-fluid" style="background-image: url('assets/banner/banner.jpg');">
+
+        <header id="header" class="container-md p-3 bg-fhprimary bg-opacity-10 text-bg-primary">
+
+            <nav class="navbar navbar-expand navbar-dark">
+
+
+                    <a class="navbar-brand" href="#">
+                        
+                        <img src="assets/logo.svg" class="FastHostCity Logo" style="width: 12.5rem" alt="">
+                    </a>
+
+        
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+
+
+                      <div class="ms-auto">
+                            <a class="btn btn-lg btn-fhsecondary bg-gradient rounded-pill" href="https://fasthostcity.com/shared-hosting-packages/" target="_blank">Buy Hosting</a>
+                      </div>
+                  
+
+          
+            </nav>
+
+        </header>
+
+        <section id="hero" class="container-md text-center">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+
+                    <h1 class="text-white display-3">FastPayment for FastHostCity</h1>
+                    <p class="lead text-white"> Automatic Payment for fasthostcity MTN MoMo & Orange Money</p>
+
+                    <button class="btn btn-fhsecondary btn-lg rounded-pill" data-bs-toggle="modal" data-bs-target="#paymentModal">Pay Now</button>
+
+                    <!-- Payment Alert Components -->
+
+                    <div class="alert alert-success alert-dismissible fade show mt-3 w-50 mx-auto" role="alert">
+                         Payment <strong>Successful</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                   </div>
+
+
+                   <div class="alert alert-danger alert-dismissible fade show mt-3 w-50 mx-auto" role="alert">
+                    Payment <strong>Not Successful</strong>
+                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+                   <!-- Payment Alert Components -->
+
+              </div>
+        
+                </div>
+            </div>
+         
+           
+        </section>
+
+    </section>
+
+
+
+    <div class="modal fade" id="paymentModal" aria-hidden="true" aria-labelledby="paymentModalHeading" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+        <form action="#" method="POST">
+           
+          <div class="modal-content rounded-0">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="paymentModalHeading">MTN MoMo / Orange Money</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                 <div class="input-group mb-3">
+                    <span class="input-group-text" id="mobileNumber">+237</span>
+                    <input type="text" class="form-control" name="number" placeholder="" aria-label="momo number" aria-describedby="mobileNumber" maxlength="9" minlength="9" required aria-required="true">
+                    
+                 </div>
+    
+                 <div class="mb-3">
+                     <p><label>Select Payment Type</label></p>
+                    <select class="form-select" name="service" aria-label="Payment Type Selection">
+                        <option value="MTN">MTN Momo</option>
+                        <option value="ORANGE">ORANGE Money</option>
+                      </select>
+                 </div>
+
+                 <small class="text-small text-danger">- Please type only your number with no (+237) or (237)</small> <br>
+                 <small class="text-small text-danger">- Make sure you select the correct payment type MTN or Orange</small> <br>
+                 <small class="text-small text-danger">- Do not reload or leave this page</small>
+
+                 
+                
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-fhprimarylight text-white" data-bs-dismiss="modal">Close</button>
+              <button class="btn btn-fhsecondary" data-bs-target="paymentModal" data-bs-toggle="modal">Confirm Payment</button>
+            </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+   
+
+
+
+      
+      
+
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="app/script/app.js"></script>
+</body>
+</html>

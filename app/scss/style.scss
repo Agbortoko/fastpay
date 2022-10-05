@@ -1,0 +1,24 @@
+
+// Custom variables
+
+
+$font-family-sans-serif: 'Montserrat', sans-serif;
+
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+
+// Custom theme colors added to bootstrap
+
+$custom-theme-colors : (
+    "fhprimary": hsl(202, 92%, 19%),
+    "fhsecondary": hsl(35, 84%, 62%),
+    "fhprimarylight": hsl(194, 69%, 46%),
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import 'banner';
+@import 'login';
+@import 'preloader';
